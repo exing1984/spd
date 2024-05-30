@@ -1,0 +1,125 @@
+.wd-footer {
+  background: var(--footer-background);
+  color: var(--footer-text-color);
+}
+
+.wd-copyright {
+  text-align: center;
+  padding-top: 15px;
+
+  &.footer-style1 {
+    & > .row {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 15px;
+    }
+  }
+
+  &.footer-style2 {
+    background: var(--copyright-bg-color);
+    margin-top: 70px;
+  }
+
+}
+
+.wd-footer {
+  p,li,a {
+    color: var(--footer-text-color);
+  }
+
+  .footer-style2 {
+    p {
+      color: var(--copyright-text-color);
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: block;
+margin: 0;
+    &.block {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    font-family: "Segoe UI";
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  .widget {
+    & > ul {
+      margin: 0;
+
+      li {
+        padding: 5px 0;
+      }
+    }
+
+    .wp-caption-text {
+      color: #000;
+    }
+  }
+}
+
+.copyright-menu {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .sub-menu {
+    display: none;
+  }
+
+  a {
+    color: var(--copyright-text);
+    font-size: 13px;
+    padding: 0;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  li {
+    border-right: 1px solid rgba(255, 255, 255, 0.41);
+    padding: 0 30px;
+    @include breakpoint(small only) {
+      padding: 0 20px;
+    }
+    display: inline-block;
+    margin: 0;
+    line-height: 12px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.copyright {
+  color: #93a1a7;
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.5;
+  padding-bottom: 0.7em;
+
+  p {
+    color: rgba(255, 255, 255, .8);
+  }
+}
+
+.widget-logo {
+  padding: 0px 10px;
+
+  img {
+    display: block;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,74 @@
+.wd-heading {
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+  .first-title {
+    font-size: 22px;
+  }
+  &.text-right {
+    .title_a, .title_b, .title_c {
+      float: right;
+      width: 100%;
+    }
+  }
+  h2, h3, h4, h5, h6 {
+    span {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      &:after{
+        content: '';
+        display: block;
+        background-color: var(--primary-color);
+        height: 6px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        z-index: -1;
+        @include breakpoint(medium up) {
+          height: 13px;
+          bottom: 8px;
+        }
+      }
+      br {
+        line-height: 0;
+      }
+    }
+  }
+  h2, h3, h4, h5, h6 {
+    @include breakpoint(large up) {
+      margin: 17px 0;
+    }
+  }
+  &.s-behind-t {
+    position: relative;
+    h2 {
+      position: relative;
+      @include breakpoint(large up) {
+        font-size: 48px;
+      }
+    }
+    .subtitle {
+      position: absolute;
+      left: -30px;
+      z-index: 0;
+      margin: 0;
+      font-weight: 900;
+      opacity: .05;
+      color: var(--header-color);
+      display: none;
+      bottom: -30px;
+      font-size: 120px;
+      display: none;
+      @include breakpoint(large up){
+        display: block;
+      }
+    }
+  }
+}

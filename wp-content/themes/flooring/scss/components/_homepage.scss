@@ -1,0 +1,107 @@
+div.screen {
+  position: relative;
+  height: 100%;
+  min-height: 700px;
+  @include breakpoint(small only) {
+    min-height: 500px;
+  }
+  .screen1, .screen2 {
+    position: absolute;
+  }
+  .screen1 {
+    top: 0;
+    left: 130px;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, .17);
+  }
+  .screen2 {
+    bottom: 70px;
+    left: -20px;
+    z-index: -1;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, .17);
+    transform: scaleX(-1);
+    @include breakpoint(small only) {
+      bottom:0;
+    }
+  }
+}
+.flying-row {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.wd-heading-box {
+  width: 200px;
+  min-height: 175px;
+  background: #966528 0% 0% no-repeat padding-box;
+  opacity: 1;
+  position: absolute;
+  top: calc(71% - 60px);
+  @include breakpoint(large up) {
+    right: calc(90% - 60px);
+  }
+  h2 {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    font-family: Roboto;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 139px;
+    height: 27px;
+    font-weight: lighter;
+    span {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 39px;
+      background: none;
+    }
+  }
+}
+.wd-heading-box2 {
+  width: 622px;
+  height: 484px;
+  background: #966528 0% 0% no-repeat padding-box;
+  opacity: 1;
+  @include breakpoint(small only) {
+  width: 542px;
+  }
+}
+.box2-p p {
+  position: absolute;
+  top: calc(55% - 20px);
+  min-width: 114%;
+  padding-left: 125px;
+  @include breakpoint(small only) {
+  padding-left: 25px;
+  min-width: 90%;
+  }
+
+}
+
+.box-bleue .wd-btn-wrap .wd-btn {
+  background: #ebebeb;
+  position: relative;
+  bottom: 140px;
+  right: -120px;
+  @include breakpoint(small only) {
+    right: -25px;
+  }
+  
+}
+.wd-heading-box2 h2 {
+  color: #fff !important;
+  position: relative;
+  left: calc(36% - 100px);
+  top: calc(40% - 100px);
+  @include breakpoint(small only) {
+    left: calc(20% - 90px);
+    font-size: 38px;
+  }
+  max-width: 66%;
+  height: 128px;
+  z-index: 99;
+  font-size: 48px;
+  
+}

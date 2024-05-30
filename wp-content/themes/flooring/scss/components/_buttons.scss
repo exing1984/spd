@@ -1,0 +1,97 @@
+// button shortcode
+.wd-btn {
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  transition: .3s all ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
+  will-change: background;
+  text-transform: uppercase;
+}
+
+///// Exception for underline style
+a.wd-btn.btn-underline {
+  line-height: unset;
+  height: auto;
+  border-bottom: 2px solid;
+  border-radius: 0;
+  padding: 0 0 2px;
+}
+//--------- btn border -----
+a.btn-border {
+  border: 1px solid var(--primary-color);
+}
+/////// button size
+
+// Big
+.wd-btn.btn-big {
+  line-height: 2;
+  font-size: 15px;
+  padding: 18px 48px 13px;
+  &.btn-border {
+    padding: 14px 48px 9px;
+  }
+}
+
+// medium
+.wd-btn.btn-medium {
+  line-height: 2em;
+  font-size: 13px;
+  padding: 11px 36px 9px;
+  &.btn-border {
+    padding: 7px 36px 5px;
+    &:hover {
+      padding-inline: 40px;
+    }
+  }
+}
+
+// small
+.wd-btn.btn-small {
+  line-height: 2;
+  font-size: 12px;
+  padding: 9px 30px 7px;
+  &,
+  &:hover {
+    border-width: 3px;
+  }
+  &.btn-border {
+    padding: 6px 30px 4px;
+  }
+}
+
+////// button border radius
+
+//Round
+.wd-btn.btn-round {
+  border-radius: 32px;
+}
+
+// Radius
+.wd-btn.btn-radius {
+  border-radius: 5px;
+}
+
+// boder none
+.wd-btn.btn-none {
+  border-radius: 0;
+}
+
+.overflow-visible {
+  a.btn-border:after {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(to right, #ffc739, #c78a25);
+    content: '';
+    z-index: -1;
+    border-radius: 26px;
+    transition: all .5s ease-in-out;
+  }
+  a.btn-border:hover:after {
+      background: linear-gradient(to right, #ffc739 50%, #c78a25 120%);
+  }
+}

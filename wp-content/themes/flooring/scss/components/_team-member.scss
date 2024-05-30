@@ -1,0 +1,79 @@
+
+//***********************    Style 2   **********************/
+.team-list-style2 {
+  > li {
+    list-style: none;
+    @include breakpoint(small only) {
+      padding: 0 5px;
+    }
+  }
+  .team-member {
+    border-radius: unset;
+    transition: all 0.35s cubic-bezier(.45, .05, .55, .95);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(99, 98, 97, 0.08);
+    margin-bottom: 15px;
+    @include breakpoint(medium up){
+      margin-bottom: 40px;
+    }
+    &:hover {
+    /*  @extend .small-shadow:hover; */
+      transform: translate3d(0, -20px, 0);
+    }
+    &__picture {
+      padding: 0;
+      img {
+        border-bottom: 4px solid #0c0c0c;
+      }
+    }
+    &__info {
+      text-align: center;
+      padding: 24px 30px 10px 30px;
+      @include breakpoint(small only) {
+        padding: 30px 15px 6px 15px;
+      }
+    }
+    &__name {
+      margin: 0;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    &__job {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 3px;
+    }
+    &__socialmedia {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-top: -10px;
+      ul {
+        margin: 0;
+        li {
+          display: inline;
+          padding: 0 6px;
+          a {
+            color: #BDBAC2;
+            font-weight: 400;
+            padding: 3px 8px;
+            background: #F5F5F5;
+            border-radius: 50%;
+            font-size: 17px;
+            min-width: 34px;
+            display: inline-block;
+            text-align: center;
+            min-height: 34px;
+          }
+        }
+      }
+      .fa-twitter {
+        color: #000;
+      }
+    }
+
+  }
+}

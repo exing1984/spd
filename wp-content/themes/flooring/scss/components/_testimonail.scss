@@ -1,0 +1,230 @@
+/*
+ * ---------testimonials---------------
+ */
+.owl-testimonial:not(.wd-testimonial_style_2) {
+  margin: 0;
+
+  blockquote {
+    border: none;
+    color: inherit;
+
+    img {
+      margin: 0 0px 0 20px;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      float: right;
+      padding: 8px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    cite {
+      text-align: right;
+      padding-left: 0;
+      font-size: 16px;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding-top: 22px;
+
+      &::before {
+        content: "";
+      }
+    }
+
+    .job-title {
+      color: #000000;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  p {
+    margin-top: 15px;
+    line-height: 1.714;
+    color: inherit;
+    text-align: left;
+    font-style: italic;
+    font-size: 18px;
+    padding: 50px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-family: serif;
+    position: relative;
+    &:before {
+      content: "\f10d";
+      font-family: "FontAwesome";
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 30px;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    &:after {
+      content: "\f10e";
+      font-family: "FontAwesome";
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 30px;
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+    }
+  }
+
+  .quote {
+    display: none;
+  }
+
+  .owl-controls {
+    .owl-nav {
+      display: none;
+    }
+  }
+}
+
+/**
+//////////////////////////////////// Style 2  //////////////////////////////////////
+*/
+
+.wd-testimonial.wd-testimonial_style_2 {
+  padding-bottom: 0;
+  padding-right: 40px;
+  position: relative;
+.owl-stage-outer{
+  .owl-stage{
+    @include breakpoint(small only) {
+      padding-bottom: 200px;
+    }
+  }
+}
+  .slick-slide {
+    padding: 30px 15px;
+  }
+
+  .wd-testimonial__item {
+    border: none;
+    display: flex !important;
+    transition: all ease-in-out 400ms;
+    padding: 40px 30px;
+    margin: 0;
+    box-shadow: none;
+    position: relative;
+    @include breakpoint(small only) {
+      display: block !important;
+      .wd-testimonial__thumbnail {
+        margin-bottom: 20px;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../images/quote.svg");
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: 5px;
+      position: absolute;
+      right: 20px;
+      bottom: 30px;
+      width: 105px;
+      height: 97px;
+      @include breakpoint(small only) {
+        right: 0 !important;
+        width: 75px;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+    img {
+      width: 175px !important;
+    }
+  }
+
+  .wd-testimonial__thumbnail {
+    min-width: 195px;
+    margin-right: 20px;
+  }
+
+  .wd-testimonial__info {
+   /* @include breakpoint(small only) {
+      position: absolute;
+      top: 60vw;
+    }*/
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .job {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--primary-color);
+    }
+
+    .excerpt {
+      color: var(--text-color);
+      margin-bottom: 20px;
+      @include breakpoint(large up) {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .owl-controls {
+    .owl-nav {
+      position: absolute;
+      width: 60px;
+      text-align: center;
+      line-height: 20px;
+      z-index: 99;
+      cursor: pointer;
+      bottom: unset;
+      right: 0;
+      left: unset;transform: rotate(90deg) translate(-50%);
+      top: 50%;
+
+      .owl-prev {
+        bottom: 50%;
+        transform: translate(-10%);
+        &::after {
+
+          content: '';
+          display: block;
+          width: 2px;
+          height: 90%;
+          background: #000;
+          position: absolute;
+          top: 0;
+          right: 0;
+
+        }
+      }
+
+      .owl-next {
+        bottom: 50%;
+        transform: translate(90%);
+      }
+
+      > div {
+        left: unset;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        top: unset;
+        background: none;
+        margin: 0;
+        right: unset;
+        height: unset;
+        width: 60px;
+      }
+
+      svg {
+        height: 20px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+.creative-layout {
+    .contain-to-grid {
+        position: absolute;
+        background: linear-gradient(180deg, var(--topbar-background) 0px, transparent 97%);
+        color: var(--topbar-text);
+
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: linear-gradient(180deg, var(--topbar-sticky-bg) 0px, transparent 97%);
+        .top-bar-right {
+            .menu {
+                li.menu-item {
+                    a {
+                        color: var(--topbar-sticky-text) !important;
+                        &:hover {
+                            color: var(--topbar-hover-sticky-text) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
